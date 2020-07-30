@@ -1,0 +1,13 @@
+{
+  "defaultTitle": "付款申请",
+  "usingComponents": {
+    "form-button": "/page/addView/component/formViewButton/index",
+    "my-form": "/util/myForm/index",
+    "form-view": "/util/formView/index",
+    "cell": "/util/cell/index",
+    "pupop": "/util/pupop/index",
+    "bank": "/util/bank/index",
+    "detail": "/component/detail/detail"
+  },
+  "allowsBounceVertical": "NO"
+}

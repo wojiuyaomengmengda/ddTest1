@@ -1,0 +1,116 @@
+<view class="page_wrap">
+
+    <!-- 搜索 -->
+    <view class="search m-t-20" onTap="searchShow">
+        <icon type="search" size="16" class="iconSearch"/>
+        <input placeholder="请输入" class="searchInput" disabled/>
+    </view>
+
+    <!-- 列表栏 -->
+    <!-- <view class="container m-t-20" key="container"> -->
+        <scroll-view scroll-y="{{true}}" class="m-t-20 container" style="width: 100%" onScrollToLower="scrollToLower">
+            <block a:for="{{dataList}}">
+                <cell item="{{item}}" onChanges="changeText">
+                    <view class="container_box">
+                        <view class="container_title">{{item.title}}</view>
+                        <view class="container_content">{{item.content}}</view>
+                        <view class="container_time">{{item.time}}</view>
+
+                        <view class="container_status">待办</view>
+                    </view>
+                </cell>
+            </block>
+
+            <!-- <view class="scroll_bottom_loading">
+                <image class="scroll_bottom_loading_image" src="../../image/loading.png" mode="aspectFit"></image>
+                <text>{{loadContent}}</text>
+            </view> -->
+            <list-loading loadMore="{{loadMore}}"></list-loading>
+        </scroll-view>
+    <!-- </view> -->
+
+    <!-- 新增 -->
+    <view class="addView">
+        <view onTap="addView"
+            class="{{!addShow ? 'addView_add' : 'addView_add addView_add_active'}}"
+        >
+            <image mode="scaleToFill" src="../../image/add.png"/>
+        </view>
+        <view
+            class="{{!addShow ? 'addView_mask' : 'addView_mask addView_mask_active'}}"
+        ></view>
+
+        <view 
+            onTap="gotoAddView" 
+            data-id="0"
+            class="{{!addShow ? 'addView_item' : 'addView_item item_1'}}"
+        >
+            <view class="addView_item_image">
+                <image mode="scaleToFill" src="../../image/baoxiao.png"/>
+            </view>
+            <view>报销申请</view>
+        </view>
+
+        <view 
+            onTap="gotoAddView" 
+            data-id="1"
+            class="{{!addShow ? 'addView_item' : 'addView_item item_2'}}"
+        >
+            <view class="addView_item_image">
+                <image mode="scaleToFill" src="../../image/jiekuanshenqing.png"/>
+            </view>
+            <view>借款申请</view>
+        </view>
+
+        <view 
+            onTap="gotoAddView" 
+            data-id="2"
+            class="{{!addShow ? 'addView_item' : 'addView_item item_3'}}"
+        >
+            <view class="addView_item_image">
+                <image mode="scaleToFill" src="../../image/jiekuanshenqing.png"/>
+            </view>
+            <view>付款申请</view>
+        </view>
+    </view>
+</view>
+
+
+<drawer maskShow="{{maskShow}}" onClose="searchHide">
+    <view class="m-20 searchBox_title">筛选</view>
+    <view class="searchBox_content"> 
+        <view class="search m-t-20">
+            <icon type="search" size="16" class="iconSearch"/>
+            <input placeholder="请输入" class="searchInput"/>
+        </view>
+
+        <view class="flex">
+            <view class="flex_left m-t-20">时间</view>
+            <view class="search-time">
+                <view onTap="changeStartTime">{{startTime}}</view>
+                <view class="m-l-r-20"> 至 </view>
+                <view onTap="changeEndTime">{{endTime}}</view>
+            </view>
+        </view>
+
+        <view class="flex" onTap="changeDep">
+            <view class="flex_left m-t-20">部门</view>
+            <view class="search-time search_text">
+                <block a:for="{{departments}}">
+                    <view>{{item.name}}</view>
+                </block>
+            </view>
+        </view>
+    </view>
+
+    <view class="searchHeader">
+        <view class="btn_clear" onTap="searchHide">取消</view>
+        <view class="btn_search">确定</view>
+    </view>
+</drawer>
+
+
+
+
+
+

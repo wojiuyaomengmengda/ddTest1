@@ -1,0 +1,20 @@
+<view class="page_wrap">
+		<view class="container">
+			<!-- <form-view config="{{item}}" onChanges="changes" onBindKeyInput="bindKeyInput"></form-view> -->
+			<my-form title="{{item.title}}" item="{{item}}" a:for="{{formList}}" required="{{item.required}}">
+				<form-view config="{{item}}" onChanges="changes" onBindKeyInput="bindKeyInput" ></form-view>
+			</my-form>
+		</view>
+
+		<view class="page_footer" onTap="submit">
+            <view class="submit">提交</view>
+		</view>
+</view>
+
+
+
+<!-- 选择银行卡号组件 -->
+<!-- <pupop maskShow="{{maskShow}}" onClose="searchHide">
+	<bank onClose="searchHide" onSuccess="changeBank" default="{{row}}" data="{{bankList}}"></bank>
+</pupop> -->
+

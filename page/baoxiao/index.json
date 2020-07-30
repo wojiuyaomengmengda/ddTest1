@@ -1,0 +1,10 @@
+{
+  "defaultTitle": "新建报销申请",
+  "usingComponents": {
+    "form-button": "/page/addView/component/formViewButton/index",
+    "my-form": "/util/myForm/index",
+    "form-view": "/util/formView/index",
+    "cell": "/util/cell/index",
+    "time-line": "/util/timeLine/index"
+  }
+}

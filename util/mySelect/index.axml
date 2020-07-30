@@ -1,0 +1,46 @@
+<import src="/mixin/loading/loading.axml"/>
+
+<view class="{{maskShow ? 'mySelectMaskBox showSelect' : 'mySelectMaskBox'}}" >
+    <!-- <view class="search m-t-20">
+        <icon type="search" size="16" class="iconSearch"/>
+        <input placeholder="请输入" class="searchInput"  onInput="bindKeyInput"/>
+    </view> -->
+
+    <view class="cas_search m-t-20">
+        <icon type="search" size="16" class="iconSearch"/>
+        <input placeholder="请输入" class="searchInput"  onInput="bindKeyInput"/>
+        <view class="search_btn">搜索</view>
+    </view>
+
+    <view class="mySelectContent">
+        <view class="list-box">
+            <view class="my_select_content_cell" a:for="{{arr}}" onTap="change" data-index="{{index}}">
+                <view class="left">
+                    <view>{{item.FName}}</view>
+                    <view>开户银行: {{item.FOpenBankName}}</view>
+                    <view>银行账号: {{item.FBankCode}}</view>
+                    <view>账户名称: {{item.FBankHolder}}</view>
+                </view>
+                <view class="right">
+                    <icon type="success" size="20" a:if="{{item.checked}}"/>
+                    <view class="circle" a:else></view>
+                </view>
+            </view>
+        </view>
+
+        <view class="errorView" a:if="{{errShow}}">
+            <view>数据获取失败，点击重新获取!</view>
+            <view class="refreshBtn my_btn" onTap="refresh">
+                <image src="../../image/shuaxin.png"></image>
+                <text>刷新</text> 
+            </view>
+        </view>
+
+        <template is="loading" a:if="{{loading}}"/>
+    </view>
+
+    <view class="mySel_searchHeader">
+        <view class="mySel_btn_clear" onTap="close">取消</view>
+        <view class="mySel_btn_search" onTap="sure">确定</view>
+    </view>
+</view>

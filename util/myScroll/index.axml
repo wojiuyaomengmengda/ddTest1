@@ -1,0 +1,13 @@
+<movable-area>
+    <view>加载中</view>
+    <movable-view 
+        class="max" 
+        direction="vertical"
+        out-of-bounds="true" 
+        inertia="true"
+        damping="2000"
+        friction="200"
+        >
+        movable-view
+    </movable-view>
+</movable-area>

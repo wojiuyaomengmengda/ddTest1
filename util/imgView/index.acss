@@ -1,0 +1,90 @@
+/* .imgView {
+    margin-top: 20rpx;
+    padding: 20rpx 40rpx;
+    background: #fff;
+}
+.imgView .title {
+    color: #666;
+    font-weight: 700;
+}
+.imgView .content {
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.pro_content_userBox {
+    position: relative;
+    width: 80rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10rpx;
+}
+.pro_content_userBox .del {
+    width: 20rpx;
+    height: 20rpx;
+    position: absolute;
+    top: -10rpx;
+    right: -10rpx;
+    font-size: 20rpx;
+    line-height: 20rpx;
+    text-align: center;
+}
+.pro_content_userBox_image {
+  width: 80rpx;
+  height: 80rpx;
+  overflow: hidden;
+}
+.pro_content_userBox_image image {
+  width: 100%;
+  height: 100%;
+}
+.pro_content_userBox .addUser {
+  border-radius: 50%;
+  border: 1px dashed red;
+}
+.pro_content_userBox_name {
+  font-size: 24rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+} */
+.fileView {
+    margin-top: 20rpx;
+    padding: 40rpx;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.fileView .title {
+    color: #666;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+}
+.fileView .content {
+    text-align: right;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.fileView .pro_content_addBox {
+  color: #3296FA;
+}
+.fileView .file_item {
+    margin: 10rpx;
+    padding: 10rpx;
+    background: #f5f7fa;
+    display: flex;
+}
+.fileView .file_item .file_info {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+.fileView .file_item .file_del{
+    width: 20rpx;
+}

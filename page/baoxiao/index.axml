@@ -1,0 +1,78 @@
+<view class="page_wrap">
+		<view class="container">
+			<!-- <form-view config="{{item}}" onChanges="changes" onBindKeyInput="bindKeyInput"></form-view> -->
+			<my-form title="{{item.title}}" item="{{item}}" a:for="{{formList}}" required="{{item.required}}">
+				<form-view config="{{item}}" onChanges="changes" onBindKeyInput="bindKeyInput" ></form-view>
+			</my-form>
+			
+			<block a:for="{{details}}">
+				<view class="m-t-20">
+					<cell title="{{item.name}}">
+						<view slot="right" class="addView_cell_details_addBox">
+							<text class="addBox_add addBoxItem" onTap="addDetails">+</text>
+							<text class="addBox_reduce addBoxItem" data-id="{{index}}" onTap="reduceDetails" a:if="{{index !== 0}}">-</text>
+						</view>
+						<view>
+							<my-form title="报销金额" item="{{item}}" required="true">
+								<input placeholder="请输入" value="{{item.data.money}}" onInput="d_bindKeyInput" data-id="{{index}}"/>
+							</my-form>
+						</view>
+						<view>
+							<my-form title="报销明细" item="{{item}}" required="true">
+								<textarea onBlur="bindTextAreaBlur" auto-height placeholder="请输入报销明细" data-id="{{index}}" maxlength="-1" value="{{item.data.details}}"/>
+							</my-form>
+						</view>
+					</cell>
+				</view>
+			</block>
+			
+			<view>
+				<my-form title="总报销金额:">
+					<text>{{allMoney}}</text>
+				</my-form>
+			</view>
+
+			<view class="m-t-20">
+				<cell title="审批流程">
+					<time-line data="{{timeLineArr}}">
+						<view slot-scope="props" class="pro_box">
+							<!-- {{props.item.title}} -->
+							<view>
+								<view>{{props.item.title}}</view>
+								<view class="pro_content">
+									<view a:for="{{props.item.userList}}" class="pro_content_userBox">
+										<view class="pro_content_userBox_image">
+											<!-- <image mode="aspectFit" src="../../image/avatar.png"/> -->
+											<open-avatar
+												userId="{{item.userId}}"
+												size="normal"></open-avatar>
+										</view>
+										<view class="pro_content_userBox_name">{{item.name}}</view>
+									</view>
+
+									<view class="pro_content_userBox" onTap="changeUser" data-id="{{props.item.id}}">
+										<view class="pro_content_userBox_image addUser">
+											<image mode="aspectFit" src="../../image/add.png"/>
+										</view>
+										<view class="pro_content_userBox_name"></view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</time-line>
+				</cell>
+			</view>
+		</view>
+
+		<view class="page_footer" onTap="submit">
+            <view class="submit">提交</view>
+		</view>
+</view>
+
+
+
+<!-- 选择银行卡号组件 -->
+<!-- <pupop maskShow="{{maskShow}}" onClose="searchHide">
+	<bank onClose="searchHide" onSuccess="changeBank" default="{{row}}" data="{{bankList}}"></bank>
+</pupop> -->
+

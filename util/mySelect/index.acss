@@ -1,0 +1,164 @@
+.mySelectMaskBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #fff;
+    z-index: 12;
+    transition: all .3s;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+}
+.showSelect {
+    transform: translateX(0)
+}
+
+.mySelectMaskBox .search {
+    background: rgb(245, 245, 245);
+    width: 90%;
+    overflow: hidden;
+    margin: 20rpx auto 20rpx;
+    border-radius: 40rpx;
+    padding: 0 40rpx;
+    box-sizing:border-box;
+    position: relative;
+}
+.mySelectMaskBox .my-input {
+    width: 229rpx;
+    height: 70rpx;
+}
+.mySelectMaskBox .iconSearch {
+    /* position:absolute;
+    top: 16rpx; */
+}
+.mySelectMaskBox .searchInput {
+    /* margin-left: 40rpx; */
+    background: rgb(245, 245, 245);
+}
+.mySelectMaskBox .search-time {
+    display: flex;
+    text-align: center;
+    margin-top: 20rpx;
+    justify-content:center;
+    color: #333;
+    font-size: 12px;
+}
+
+.mySelectMaskBox .mySel_searchHeader {
+    height: 100rpx;
+    display: flex;
+    line-height: 100rpx;
+    box-sizing: border-box;
+    text-align: center;
+}
+.mySelectMaskBox .mySel_btn_clear {
+    width: 40%;
+}
+.mySelectMaskBox .mySel_btn_search {
+    flex: 1;
+    background: #49a9ee;
+    color: #fff;
+}
+.mySelectMaskBox .mySelectContent {
+    flex: 1;
+    background: #F6F6F6;
+    overflow-y: scroll;
+}
+.mySelectMaskBox .mySelectContent .list-box {
+    margin: 20rpx;
+    padding: 0 30rpx;
+    border-radius: 20rpx;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+}
+.mySelectMaskBox .my_select_content_cell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30rpx;
+}
+.my_select_content_cell + .my_select_content_cell {
+    border-top: 1px solid #e4e4e4;
+}
+.mySelectMaskBox .my_select_content_cell .left {
+    flex: 1;
+}
+.mySelectMaskBox .my_select_content_cell .right {
+    width: 20px;
+    height: 20px;
+}
+.mySelectMaskBox  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.mySelectMaskBox .cas_search {
+    /* background: rgb(245, 245, 245); */
+    background: #fff;
+    width: 90%;
+    overflow: hidden;
+    margin: 20rpx auto;
+    border-radius: 20rpx;
+    height: 80rpx;
+    /* line-height: 80rpx; */
+    box-sizing:border-box;
+    position: relative;
+    box-shadow: 0 0 0.1rem 0 rgba(0,0,0,.1);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.mySelectMaskBox .iconSearch {
+    /* position:absolute;
+    top: 16rpx; */
+    margin-left: 20rpx;
+    width: 16px;
+    height: 16px;
+}
+.mySelectMaskBox .searchInput {
+    background: #fff;
+    flex: 1;
+    color: #333;
+}
+.mySelectMaskBox .search_btn {
+    width: 120rpx;
+    text-align: center;
+    height: 100%;
+    background-color: #12b7f5;
+    color: #fff;
+    line-height: 80rpx;
+}
+
+
+.errorView {
+    width: 100%;
+    height: 200rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.errorView .refreshBtn {
+    width: 200rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 10px;
+    border: 1px solid #49a9ee;
+    color: #49a9ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rpx;
+}
+.errorView .refreshBtn image{
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,16 @@
+{
+  "defaultTitle": "其他付款",
+  "usingComponents": {
+    "form-button": "/page/addView/component/formViewButton/index",
+    "my-form": "/util/myForm/index",
+    "form-view": "/util/formView/index",
+    "cell": "/util/cell/index",
+    "pupop": "/util/pupop/index",
+    "detail": "/component/detail/detail",
+    "img-view": "/util/imgView/index",
+    "file-view": "/util/fileView/index",
+    "my-select": "/util/mySelect/index",
+    "my-cascader": "/util/myCascader/index"
+  },
+  "allowsBounceVertical": "NO"
+}

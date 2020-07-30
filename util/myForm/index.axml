@@ -1,0 +1,22 @@
+<cell key="formView" onChanges="cellClick" item="{{item}}" a:if="{{!item.hidden}}">
+    <view class="formView_textarea" a:if="{{item.type === 'textarea'}}">
+        <view class="form_view_title">
+            <text class="form_view_required" a:if="{{required}}">*</text>
+            {{title}}
+        </view>
+        <view>
+            <slot />   
+        </view>
+    </view>
+    <view class="formView" a:else>
+        <!--左侧标题栏 --> 
+        <view class="form_view_title">
+            <text class="form_view_required" a:if="{{required}}">*</text>
+            {{title}}
+        </view>
+        <!-- 右侧功能栏 -->
+        <view class="form_view_clot">
+            <slot />
+        </view>
+    </view>
+</cell>

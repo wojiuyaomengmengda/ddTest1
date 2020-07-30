@@ -1,0 +1,57 @@
+<view style="display: flex;align-items:center">
+    <button onTap="clickBtn" style="width:200rpx">下拉框</button>
+    <my-picker 
+        maskShow="{{maskShow}}" 
+        onClose="mySelectClose" 
+        list="{{list}}"
+        onChange="selectChange"
+    ></my-picker>
+    <text>选择的是: {{name}}</text>
+</view>
+
+<approval-form 
+    value="{{approvalData}}" 
+    title="关联审批单(多选)"
+    onChange="approvalChange" 
+></approval-form>
+
+<view style="display: flex;align-items:center">
+    <button style="width:200rpx" onTap="cascaderOpen">3级选择器</button>
+    <my-cascader maskShow="{{cascaderShow}}" onClose="cascaderClose" onSend="cascaderSend"></my-cascader>
+    <text>选择的是: {{cascaderName}}</text>
+</view>
+
+<view style="display: flex;align-items:center">
+    <button style="width:200rpx" onTap="formApprovalOpen">审批组件</button>
+    <form-approval maskShow="{{formApprovalShow}}" onClose="formApprovalClose" onSend="formApprovalSend"></form-approval>
+    <text>选择的是: {{name}}</text>
+</view>
+
+<img-view value="{{imgArray}}" onChange="imgChange"></img-view>
+<file-view value="{{fileArray}}" onChange="fileChange"></file-view>
+
+<view>
+    <button onTap="chooseDingTalkDir">选择钉盘目录</button>
+</view>
+
+<view style="display: flex;align-items:center">
+    <button onTap="mySelectOpen" style="width:200rpx">供应商选择器</button>
+    <my-select 
+        maskShow="{{mySelectShow}}" 
+        list="{{mySelectList}}"
+        onClose="selectClose"
+        onChange="selectChange"
+    ></my-select>
+</view>
+
+<view>
+    <button onTap="test">测试弹出框</button>
+</view>
+
+<view>
+    <button onTap="testSetTimeout">定时器测试</button>  
+</view>
+
+<view>
+    <button onTap="getUserInfo">获取用户信息</button>
+</view>

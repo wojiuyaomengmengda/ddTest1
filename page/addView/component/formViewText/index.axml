@@ -1,0 +1,5 @@
+    <!-- 普通文本 --> 
+    <view a:if="{{config.type === 'text'}}" class="formView_button">
+        <view class="flex_left">{{config.value}}</view>
+        <view class="flex_right"></view>
+    </view>

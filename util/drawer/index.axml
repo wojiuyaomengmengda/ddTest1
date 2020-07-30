@@ -1,0 +1,8 @@
+<view class="drawer_searchBox" a:if="{{maskShow}}" onTap="close"></view>
+<view 
+    class="drawer_searchBox_box" 
+    animation="{{itemAnimationInfo}}"
+    key="drawer"
+>
+    <slot />
+</view>

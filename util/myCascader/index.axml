@@ -1,0 +1,68 @@
+<import src="/mixin/loading/loading.axml"/>
+
+<view class="{{maskShow ? 'Cascader showSelect' : 'Cascader'}}" >
+    <view class="content">
+        <!-- 搜索栏 -->
+        <!-- <view class="cas_search m-t-20">
+            <icon type="search" size="16" class="iconSearch"/>
+            <input placeholder="请输入" class="searchInput"  onInput="bindKeyInput"/>
+            <view class="search_btn">搜索</view>
+        </view> -->
+
+        <!-- 面包屑栏 -->
+        <view class="breadcrumb">
+            <view class="breadcrumb_item" onTap="clearBreadcrumb">
+                <text>{{title}}</text>
+                <view>></view>
+            </view>
+
+            <view 
+                class="breadcrumb_item" 
+                a:for="{{breadcrumb}}" 
+                onTap="clickBreadcrumb" 
+                data-index="{{index}}"
+                data-item="{{item}}">
+                    <text>{{item.name}}</text>
+                    <view>></view>
+            </view>
+        </view>
+
+        <view class="cascaderList">
+            <view class="cascader_list_item" a:for="{{dataList}}">
+                <block a:if="{{breadcrumb.length > 0}}">
+                    <view class="left" onTap="checkView" data-item="{{item}}">
+                        <icon type="success" size="20" a:if="{{item.id === value.id}}"/>
+                        <view class="circle" a:else></view>
+                    </view>
+                </block>
+                <view 
+                    class="cascader_list_item_title" 
+                    onTap="changeView" 
+                    data-item="{{item}}">
+                        {{item.name}}
+                </view>
+                <!-- <view class="next" a:if="{{item.ifLevel}}">
+                    <image class="next_imag_box" src="../../image/zuzhi.png"></image>
+                    <view onTap="getNextLevel" data-item="{{item}}">下级</view>
+                </view> -->
+            </view>
+
+            
+            <template is="loading" a:if="{{loading}}"/>
+
+            <view class="errorView" a:if="{{errShow}}">
+                <view>数据获取失败，点击重新获取!</view>
+                <view class="refreshBtn my_btn" onTap="refresh">
+                    <image src="../../image/shuaxin.png"></image>
+                    <text>刷新</text> 
+                </view>
+            </view>
+        </view>
+
+
+    </view>
+    <view class="btn_footer">
+        <view class="bank_btn_clear my_btn" onTap="close">取消</view>
+        <view class="bank_btn_search my_btn" onTap="sure">确定</view>
+    </view>
+</view>

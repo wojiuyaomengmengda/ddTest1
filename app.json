@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "page/loading/loading",
+    "page/home/index",
+    "page/baoxiao/index",
+    "page/detail/index",
+    "page/scrollView/index",
+    "page/addView/index",
+    "page/API/index/index",
+    "page/demo/index",
+    "page/pay/index",
+    
+    "page/organization/index",
+    "page/purchasePay/index",
+    "page/otherPay/index",
+    "page/loan/index",
+    "page/reimbursement/index"
+  ],
+  "window": {
+    "defaultTitle": "小程序",
+    "backgroundColor": "#F5F5F9",
+    "pullRefresh": false,
+    "allowsBounceVertical":"YES"
+  },
+  "debug": true
+}

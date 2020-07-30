@@ -1,0 +1,11 @@
+<template name="loading">
+    <view class="column">
+        <view class="loading_container animation-6">
+            <view class="shape shape1"></view>
+            <view class="shape shape2"></view>
+            <view class="shape shape3"></view>
+            <view class="shape shape4"></view>
+        </view>
+        <view>加载中,请稍后...</view>
+    </view>
+</template>

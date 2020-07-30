@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "my-form": "/util/myForm/index",
+    "my-picker": "/util/myPicker/index"
+  }
+}

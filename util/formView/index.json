@@ -1,0 +1,8 @@
+{
+  "component": true,
+   "usingComponents": {
+    "pupop": "/util/pupop/index",
+    "my-select": "/util/mySelect/index",
+    "my-cascader": "/util/myCascader/index"
+  }
+}

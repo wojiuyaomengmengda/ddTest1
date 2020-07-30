@@ -1,0 +1,18 @@
+.formView_button {
+    display: flex;
+}
+.flex_left {
+    flex: 0 0 90%;
+}
+.flex_right {
+    flex: 0 0 10%;
+}
+.flex_right image {
+    width: 100%;
+    height: 100%;
+}
+input {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}

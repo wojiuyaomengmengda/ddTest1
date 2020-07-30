@@ -1,0 +1,27 @@
+.scroll_bottom_loading {
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align:  center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scroll_bottom_loading text {
+    color: #9c9c9c;
+}
+.scroll_bottom_loading_image{
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 20rpx;
+    animation: rotatefresh 2s infinite linear;
+}
+
+@keyframes rotatefresh {
+    from { 
+        transform: rotate(0deg) 
+    }
+    to {
+        transform: rotate(360deg);
+        /* transition: all 0.6s; */
+    }
+}

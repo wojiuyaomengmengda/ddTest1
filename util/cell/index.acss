@@ -1,0 +1,20 @@
+.cell {
+    /* padding-top: 20rpx;
+    padding-left: 20rpx; */
+    padding: 20rpx 40rpx;
+    background: #fff;
+    /* margin-bottom: 1px; */
+    border-bottom:1px solid #F6F6F6;
+}
+.cell_title_left {
+    font-weight: 600;
+}
+.cell_content {
+    min-height: 60rpx;
+    line-height: 60rpx;
+}
+.cell_title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10rpx;
+}

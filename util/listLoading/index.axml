@@ -1,0 +1,4 @@
+<view class="scroll_bottom_loading">
+    <image a:if="{{loadMore}}" class="scroll_bottom_loading_image" src="../../image/loading.png" mode="aspectFit"></image>
+    <text>{{loadMore ? loadContent[0] : loadContent[1]}}</text>
+</view>

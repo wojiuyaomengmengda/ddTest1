@@ -1,0 +1,25 @@
+
+<view class="approvalForm_imgView">
+    <view class="title">{{title}}</view>
+    <view class="content">
+        <view a:for="{{value}}" class="file_item">
+            <view class="file_info">{{item.title}}</view>
+            <view class="file_del" onTap="clickDel" data-index="{{index}}">
+                <icon type="clear" size="10" color="#dfe0e3"  />
+            </view>
+        </view>
+
+        <view class="pro_content_userBox" onTap="clickAdd">
+            <view class="pro_content_userBox_image">
+                <image mode="aspectFit" src="../../image/add.png"/>
+            </view>
+        </view>
+    </view>
+</view>
+
+<approval 
+    maskShow="{{approvalShow}}" 
+    onClose="approvalClose" 
+    list="{{listData}}"
+    onChange="approvalChange"
+></approval>

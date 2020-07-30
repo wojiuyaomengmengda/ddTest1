@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "滚动测试组件",
+  "allowsBounceVertical": "NO",
+  "usingComponents": {
+    "cell": "/util/cell/index"
+  }
+}

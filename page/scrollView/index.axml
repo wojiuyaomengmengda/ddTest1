@@ -1,0 +1,14 @@
+<view class="page">
+     <movable-area>
+        <movable-view 
+            direction="vertical"
+            inertia="true" 
+            out-of-bounds="true"
+            damping="100"
+            onChangeEnd="{{onChangeEnd}}"
+            y="-10"
+        >
+          movable-view
+        </movable-view>
+      </movable-area>
+</view>

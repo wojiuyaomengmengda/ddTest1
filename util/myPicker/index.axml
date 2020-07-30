@@ -1,0 +1,13 @@
+<view class="{{maskShow ? 'myPickerMaskBox showPicker' : 'myPickerMaskBox'}}" onTap="close"></view>
+
+<view class="{{maskShow ? 'bottom-options showOptions' : 'bottom-options'}}">
+    <view class="myPickerContent">
+        <view class="my_select_content_cell" a:for="{{arr}}" onTap="change" data-index="{{index}}">
+            <view class="my_select_content_cell_label">{{item.label}}</view>
+        </view>
+    </view>
+
+    <view class="my_Picker_searchHeader">
+        <view class="my_Picker_bank_btn_clear" onTap="close">取消</view>
+    </view>
+</view>

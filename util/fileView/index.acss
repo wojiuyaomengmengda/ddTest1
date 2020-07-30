@@ -1,0 +1,40 @@
+.fileView {
+    margin-top: 20rpx;
+    padding: 40rpx;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.fileView .title {
+    color: #666;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    /* width: 200rpx; */
+}
+.fileView .content {
+    text-align: right;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* flex:  */
+    flex-wrap: nowrap;
+}
+.fileView .pro_content_addBox {
+  color: #3296FA;
+}
+.fileView .file_item {
+    margin: 10rpx;
+    padding: 10rpx;
+    background: #f5f7fa;
+    display: flex;
+}
+.fileView .file_item .file_info {
+    flex: 1;
+    overflow: hidden;/*超出部分隐藏*/
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;/*超出部分省略号显示*/
+}
+.fileView .file_item .file_del{
+    width: 20rpx;
+}

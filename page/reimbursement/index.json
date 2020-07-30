@@ -1,0 +1,15 @@
+{
+  "defaultTitle": "报销申请",
+  "usingComponents": {
+    "form-button": "/page/addView/component/formViewButton/index",
+    "my-form": "/util/myForm/index",
+    "form-view": "/util/formView/index",
+    "cell": "/util/cell/index",
+    "pupop": "/util/pupop/index",
+    "detail": "/component/detail/detail",
+    "img-view": "/util/imgView/index",
+    "file-view": "/util/fileView/index",
+    "my-cascader": "/util/myCascader/index"
+  },
+  "allowsBounceVertical": "NO"
+}

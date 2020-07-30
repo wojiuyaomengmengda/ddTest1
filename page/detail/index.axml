@@ -1,0 +1,63 @@
+<view class="page_wrap">
+		<view class="page_header">
+			<view class="page_nav">
+				<view class="{{nav === '0' ? 'nav_left params' : 'nav_left'}}" onTap="changeNav" data-value="0">单据信息</view>
+				<view class="{{nav === '1' ? 'nav_left params' : 'nav_left'}}" onTap="changeNav" data-value="1">审批信息</view>
+			</view>
+		</view>
+
+		<view class="container">
+			<block a:if="{{nav === '0'}}">
+				<my-form title="{{item.title}}" item="{{item}}" a:for="{{formList}}">
+					<form-view config="{{item}}" onChanges="changes" onBindKeyInput="bindKeyInput"></form-view>
+				</my-form>
+
+				<view  class="m-t-40">
+					<cell title="费用明细">
+						<my-form title="{{item.title}}" item="{{item}}" a:for="{{formList2}}">
+							<form-view config="{{item}}"></form-view>
+						</my-form>
+					</cell>
+				</view>
+			</block>
+			<time-line a:if="{{nav === '1'}}" data="{{timeLineArr}}">
+				<view slot-scope="props" class="pro_box">
+					<!-- {{props.item.content}} -->
+					<view class="pro_img" onTap="clickUser" data-info="{{props.item}}">
+						<image mode="aspectFit" src="../../image/avatar.png"/>
+					</view>
+					<view class="pro_left">
+						<view class="text_c_1">{{props.item.userName}}</view>
+						<view class="m-t-20 m-b-10 text_c_2">{{props.item.timestamp}}</view>
+						<view class="text_c_3">{{props.item.content}}</view>
+					</view>
+					<view class="pro_right">
+						<view>同意</view>
+					</view>
+				</view>
+			</time-line>
+		</view>
+
+
+
+		<view class="page_footer">
+			<view class="btn_left my_btn" onTap="formApprovalCloseShow">
+				<view class="circle">...</view>
+				<text class="approvalText">审批</text>
+			</view>
+		</view>
+
+		<form-approval 
+			maskShow="{{formApprovalShow}}" 
+			onClose="formApprovalClose" 
+			onSend="formApprovalSend">
+		</form-approval>
+</view>
+
+
+
+<!-- 选择银行卡号组件 -->
+<pupop maskShow="{{maskShow}}" onClose="searchHide">
+	<bank onClose="searchHide" onSuccess="changeBank" default="{{row}}" data="{{bankList}}"></bank>
+</pupop>
+

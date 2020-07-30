@@ -1,0 +1,30 @@
+<!--  表单的审批组件 -->
+
+<view class="{{maskShow ? 'formApproval showSelect' : 'formApproval'}}" >
+    <view class="content">
+        <view class="radioBox">
+            <view class="radio_item" a:for="{{radio}}" onTap="radioChange" data-index="{{index}}">
+                <view class="radio_left">
+                    <icon type="success" size="20" a:if="{{item.checked}}"/>
+                    <view class="circle" a:else></view>
+                </view>
+                <text>{{item.label}}</text>
+            </view>
+        </view>
+        <view class="textareaBox" onTap="bindButtonTap" >
+            <textarea 
+                focus="{{focus}}" 
+                auto-height 
+                onInput="onInput" 
+                placeholder="请输入审批意见"  
+                maxlength="-1" 
+                value="{{text}}"
+                onBlur="onBlur"
+            />
+        </view>
+    </view>
+    <view class="btn_footer">
+        <view class="bank_btn_clear my_btn" onTap="close">返回</view>
+        <view class="bank_btn_search my_btn" onTap="send">提交</view>
+    </view>
+</view>

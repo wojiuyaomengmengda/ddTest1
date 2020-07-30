@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "approval": "/util/approval/index"
+  }
+}

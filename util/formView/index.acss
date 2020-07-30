@@ -1,0 +1,79 @@
+.formView_button {
+    display: flex;
+}
+.formView_textarea {
+    /* display: flex; */
+    text-align: left;
+}
+.flex_left {
+    flex: 0 0 90%;
+}
+.flex_right {
+    flex: 0 0 10%;
+}
+.flex_right image {
+    width: 100%;
+    height: 100%;
+}
+input {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.formView_image {
+    /* width: 100vw; */
+}
+.formView_file {
+    /* width: 100vw; */
+}
+.addFile {
+    color: #3296FA;
+}
+.formView_user {
+    /* float: right; */
+    display: flex;
+    flex-direction: row-reverse;
+}
+.formView_money {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    flex-direction: column;
+}
+.formView_money_word {
+    font-size: 12px;
+    /* color: red; */
+    color: #999;
+}
+.pupop_picker_box {
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    flex-direction: column; */
+}
+.pupop_picker_box_header {
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between ;
+    border-bottom: 1px solid #ccc;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+}
+.pupop_picker_box_header view {
+    height: 100rpx;
+    line-height: 100rpx;
+}
+.pupop_picker_box_header .cancel {
+    text-align: left;
+    color: #ccc;
+}
+.pupop_picker_box_header .sure {
+    text-align: right;
+    color: #3296FA;
+}
+.imageView {
+    float: right;
+    overflow: hidden;/*超出部分隐藏*/
+    text-overflow:ellipsis;/* 超出部分显示省略号 */
+    white-space: nowrap;/*规定段落中的文本不进行换行 */
+    max-width: 500rpx;/*需要配合宽度来使用*/
+}

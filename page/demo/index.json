@@ -1,0 +1,12 @@
+{
+  "defaultTitle": "测试",
+  "usingComponents": {
+    "my-select": "/util/mySelect/index",
+    "my-picker": "/util/myPicker/index",
+    "approval-form": "/util/approvalForm/index",
+    "form-approval": "/component/formApproval/formApproval",
+    "my-cascader": "/util/myCascader/index",
+    "img-view": "/util/imgView/index",
+    "file-view": "/util/fileView/index"
+  }
+}

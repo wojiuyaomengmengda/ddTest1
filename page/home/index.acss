@@ -1,0 +1,261 @@
+@import '/util/cell/index.acss';
+.page_wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.m-20 {
+    margin: 20rpx;
+}
+.m-t-20 {
+    margin-top: 20rpx;
+}
+.m-r-20 {
+    margin-right: 20rpx;
+}
+.flex {
+    display: flex;
+    margin-top: 10rpx;
+}
+.flex-item {
+    flex: 1;
+    margin: 0 15rpx;
+}
+.cell {
+    margin-bottom: 6px;
+}
+.container {
+    flex: 1;
+    /* overflow: auto; */
+}
+.container_box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.container_content {
+    margin-top: 20rpx;
+    color: #191F25;
+    font-size: 12px;
+    line-height: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.container_title {
+    font-size: 16px;
+    color: #191F25;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.container_time {
+    font-size: 12px;
+    color: rgba(25,31,37,40)
+}
+.container_status {
+    position: absolute;
+    top: -2rpx;
+    right: -24rpx;
+    /* color: #3296FA; */
+    /* border: 1px solid #3296FA; */
+    color: #F25643;
+    border: 1px solid #F25643;
+    line-height: 14px;
+    padding: 5rpx 15rpx;
+    border-radius: 20rpx;
+    transform: rotate(25deg);
+    font-size: 12px;
+}
+.search {
+    background: #ddd;
+    width: 90%;
+    overflow: hidden;
+    margin: 20rpx auto 0;
+    border-radius: 40rpx;
+    padding: 0 40rpx;
+    box-sizing:border-box;
+    position: relative;
+    /* height: 50rpx; */
+}
+.my-input {
+    width: 229rpx;
+    height: 70rpx;
+}
+.iconSearch {
+    position:absolute;
+    top: 16rpx;
+}
+.searchInput {
+    margin-left: 40rpx;
+    background: #ddd;
+}
+.search-time {
+    height: 24rpx;
+    display: flex;
+    text-align: center;
+    margin-top: 20rpx;
+    justify-content:center;
+    color: #333;
+    font-size: 12px;
+}
+.m-l-r-20 {
+    margin: 0 20rpx;
+}
+
+.searchBox {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: #333;
+    opacity: .7;
+    z-index: 10;
+}
+.searchBox_box {
+    position: fixed;
+    right: -250px;
+    /* left: 0; */
+    top: 0;
+    bottom: 0;
+    z-index: 11;
+    width: 250px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* transition: all .5s; */
+}
+.searchBox_box .flex_left {
+    width: 200rpx;
+    padding: 0 20rpx;
+}
+.searchBox_content {
+    flex: 1;
+}
+.searchHeader {
+    height: 100rpx;
+    display: flex;
+    line-height: 100rpx;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+    text-align: center;
+}
+.btn_clear {
+    width: 40%;
+}
+.btn_search {
+    flex: 1;
+    border-left: 1px solid #ddd;
+    background: #49a9ee;
+    color: #fff;
+}
+.search_text {
+    text-align: right;
+    flex: 1;
+    /* background: red; */
+}
+
+.addView {
+    position: fixed;
+    bottom: 100rpx;
+    right: 100rpx;
+    z-index: 2;
+}
+.addView image {
+    width: 100%;
+    height: 100%;
+}
+
+.addView_item {
+    position: absolute;
+    bottom: -150rpx;
+    left: -150rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24rpx;
+    width: 100rpx;
+    height: 100rpx;
+    top: 10rpx;
+    left: 10rpx;
+    z-index: -1;
+    transition: all 0.3s;
+}
+.item_1 {
+    top: -90rpx;
+    left: 10rpx;
+}
+.item_2{
+    top: -50rpx;
+    left: 120rpx;
+}
+.item_3{
+    top:-50rpx;
+    left: -80rpx;
+}
+.addView_item_image {
+    width: 50rpx;
+    height: 50rpx;
+}
+.addView_add {
+    width: 80rpx;
+    height: 80rpx;
+    z-index: 2;
+    padding: 20rpx;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    transition: all 0.5s;
+    transform: rotate(0deg);
+}
+.addView_add_active {
+    transform: rotate(45deg);
+}
+.addView_mask {
+    z-index: -1;
+    background: #ccc;
+    opacity:0.8;
+    position: absolute;
+    width: 350rpx;
+    /* width: 0; */
+    /* height: 0; */
+    height: 350rpx;
+    top: -115rpx;
+    left: -115rpx;
+    border-radius: 50%;
+    transition: all 0.5s;
+    transform: scale(0.1);
+    /* transform: translate(-50%, -50%); */
+}
+.addView_mask_active {
+    transform: scale(1);
+    /* width: 350rpx;
+    height: 350rpx; */
+}
+.scroll_bottom_loading {
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align:  center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scroll_bottom_loading_image{
+    width: 50rpx;
+    height: 50rpx;
+    animation: rotatefresh 2s infinite linear;
+}
+
+@keyframes rotatefresh {
+    from { 
+        transform: rotate(0deg) 
+    }
+    to {
+        transform: rotate(360deg);
+        /* transition: all 0.6s; */
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "defaultTitle": "首页",
+  "usingComponents": {
+    "cell": "/util/cell/index",
+    "drawer": "/util/drawer/index",
+    "list-loading": "/util/listLoading/index",
+    "pupop": "/util/pupop/index"
+  },
+  "pullRefresh": true
+}

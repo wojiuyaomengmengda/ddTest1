@@ -1,0 +1,52 @@
+<import src="/mixin/loading/loading.axml"/>
+
+<view class="{{maskShow ? 'approvalMaskBox showSelect' : 'approvalMaskBox'}}" >
+    <view class="topNav">
+        <view class="nav_item {{nav == '0' ? 'active' : ''}}" data-index="0" onTap="navChange">我审批的</view>
+        <view class="nav_item {{nav == '1' ? 'active' : ''}}" data-index="1" onTap="navChange">我发起的</view>
+        <view class="nav_item {{nav == '2' ? 'active' : ''}}" data-index="2" onTap="navChange">抄送我的</view>
+    </view>
+
+    <view>
+        <view class="search m-t-20">
+            <icon type="search" size="16" class="iconSearch"/>
+            <input placeholder="请输入" class="searchInput"  onInput="bindKeyInput"/>
+        </view>
+
+        <my-form title="审批类型">
+            <view onTap="changeType" >{{type}}</view>
+        </my-form>
+    </view>
+    
+    <view class="approvalContent">
+        <view class="list-box" a:if="{{arr.length > 0}}">
+                <view class="my_select_content_cell" a:for="{{arr}}" onTap="change" data-index="{{index}}">
+                    <view class="right">
+                        <icon type="success" size="20" a:if="{{item.checked}}"/>
+                        <view class="circle" a:else></view>
+                    </view>
+
+                    <view class="left {{item.type == '0' ? 'adopt' : ''}}">
+                        <view class="title">{{item.title}}</view>
+                        <view class="">所属公司: {{item.org}}</view>
+                        <view>申请人: {{item.user}}</view>
+                        <view>部门: {{item.bumen}}</view>
+                        <view class="time">{{item.time}}</view>
+                    </view>
+                </view>
+        </view>
+        <template is="loading" a:else/>
+    </view>
+
+    <view class="bank_searchHeader">
+        <view class="bank_btn_clear" onTap="close">取消</view>
+        <view class="bank_btn_search" onTap="sure">确定</view>
+    </view>
+</view>
+
+<my-picker 
+    maskShow="{{typeShow}}" 
+    onClose="mySelectClose" 
+    list="{{typeList}}"
+    onChange="selectChange"
+></my-picker>

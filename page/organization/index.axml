@@ -1,0 +1,63 @@
+<view class="page_wrap">
+    <view class="{{more ? 'page_tips page_more' : 'page_tips'}}">
+        <block a:for="{{topNav}}">
+          <view class="tips_item" onTap="gotoTopNav" data-name="{{item.name}}">
+            <view class="tips_item_img">
+              <image mode='aspectFit' src="{{item.imageUrl}}"></image>
+            </view>
+            <text class="m-t-20 tips_item_text">{{item.title}}</text>
+          </view>
+        </block>
+        <view class="tips_item" onTap="more">
+          <view class="tips_item_img">
+            <image mode='aspectFit' src="../../image/more.png"></image>
+          </view>
+          <text class="m-t-20 tips_item_text">{{more ? '收起' : '更多'}}</text>
+        </view>
+    </view>
+
+
+    <view class="page_header">
+			<view class="page_nav">
+				<view class="{{nav === '0' ? 'nav_left params' : 'nav_left'}}" onTap="changeNav" data-value="0">处理中</view>
+				<view class="{{nav === '1' ? 'nav_left params' : 'nav_left'}}" onTap="changeNav" data-value="1">已完成</view>
+        <view class="{{nav === '2' ? 'nav_left params' : 'nav_left'}}" onTap="changeNav" data-value="2">已作废</view>
+			</view>
+		</view>
+
+    <!-- <view key="container"> -->
+      <scroll-view 
+        class="container m-t-20"
+        scroll-y="{{true}}" 
+        onScrollToUpper="upper" 
+        onScrollToLower="lower" 
+        onScroll="scroll" 
+        scroll-top="{{scrollTop}}">
+          <block a:for="{{dataList}}">
+              <cell item="{{item}}" onChanges="changeText">
+                  <view class="container_box">
+                      <view class="container_box_left"> 
+                        <view class="container_box_left_tips"></view>
+                      </view>
+
+                      <view class="container_box_content">
+                        <view class="container_title">{{item.title}}</view>
+                        <view class="container_content">{{item.content}}</view>
+                      </view>
+
+                      <view class="container_box_right">{{item.time}}</view>
+                  </view>
+              </cell>
+          </block>
+
+          <list-loading loadMore="{{loadMore}}"></list-loading>
+      </scroll-view>
+    <!-- </view> -->
+
+</view>
+
+
+
+
+
+

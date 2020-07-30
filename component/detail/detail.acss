@@ -1,0 +1,25 @@
+.addView_cell_details_addBox {
+  width: 150rpx;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.addBoxItem {
+  /* flex: 1; */
+  width: 60rpx;
+  text-align: center;
+  margin: 0 10rpx;
+  color: #fff;
+}
+.addBox_add {
+  background: #3296FA;
+}
+.addBox_reduce {
+  background: red;
+}
+.m-t-20 {
+  margin-top: 20rpx;
+}
+.formView_money_word {
+  font-weight: 700;
+  font-size: #999;
+}

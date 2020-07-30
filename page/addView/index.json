@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "新建借款报销",
+  "usingComponents": {
+    "form-button": "/page/addView/component/formViewButton/index",
+    "my-form": "/util/myForm/index",
+    "form-view": "/util/formView/index",
+    "cell": "/util/cell/index"
+  }
+}

@@ -1,0 +1,12 @@
+<view class="fileView">
+    <view class="title">
+        <view>{{title}}</view>
+        <view class="pro_content_addBox" onTap="clickAdd">选择文件</view>
+    </view>
+    <view a:for="{{value}}" class="file_item">
+        <view class="file_info" onTap="preview" data-item="{{item}}">{{item.fileName}}</view>
+        <view class="file_del" onTap="clickDel" data-index="{{index}}">
+            <icon type="clear" size="10" color="#dfe0e3"  />
+        </view>
+    </view>
+</view>

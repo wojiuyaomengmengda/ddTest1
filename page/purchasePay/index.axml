@@ -1,0 +1,33 @@
+<view class="page_wrap">
+		<view class="container">
+			<my-form title="{{item.title}}" item="{{item}}" a:for="{{formList}}" required="{{item.required}}">
+				<form-view config="{{item}}" onChanges="changes" onBindKeyInput="bindKeyInput" ></form-view>
+			</my-form>
+
+			<detail range="{{detailsArray}}" onChanges="renderDetail"></detail>
+		</view>
+
+		<img-view value="{{imgArray}}" onChange="imgChange" onDel="imgDel"></img-view>
+		<file-view value="{{fileArray}}" onChange="fileChange" onDel="fileDel"></file-view>
+
+		<view class="page_footer" onTap="submit">
+            <view class="submit" id="submit">提交</view>
+		</view>
+</view>
+
+<!-- 选择部门选择器 -->
+<my-cascader 
+	maskShow="{{cascaderShow}}" 
+	onClose="cascaderClose" 
+	onSend="renderDepartment">
+</my-cascader>
+
+<!-- 选择供应商控件 -->
+<my-select 
+	maskShow="{{mySelectShow}}" 
+	list="{{mySelectList}}"
+	onClose="selectClose"
+	onChange="setFCONTACTUNIT"
+></my-select>
+
+

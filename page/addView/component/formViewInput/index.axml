@@ -1,0 +1,5 @@
+    <!-- 文本输入框 --> 
+    <view class="formView_button" a:if="{{config.type === 'input'}}">
+        <input a:if="{{config.type === 'input'}}" type="" placeholder="请输入" auto-focus value="{{config.value}}" onInput="bindKeyInput"/>
+        <view class="flex_right"></view>
+    </view>

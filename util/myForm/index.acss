@@ -1,0 +1,23 @@
+.formView {
+    display: flex;
+}
+.form_view_title {
+    /* flex: 0 0 40%; */
+    width: 200rpx;
+    color: #666;
+    font-weight: 700;
+}
+.form_view_clot {
+    flex: 1;
+    text-align: right;
+    color: #000;
+    display: flex;
+    align-items: center;
+    /* font-weight: 700; */
+}
+.form_view_clot view {
+    width: 100%;
+}
+.form_view_required {
+    color: red;
+}

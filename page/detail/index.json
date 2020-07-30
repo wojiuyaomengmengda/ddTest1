@@ -1,0 +1,12 @@
+{
+  "defaultTitle": "详情",
+  "usingComponents": {
+    "my-form": "/util/myForm/index",
+    "form-view": "/util/formView/index",
+    "pupop": "/util/pupop/index",
+    "cell": "/util/cell/index",
+    "bank": "/util/bank/index",
+    "time-line": "/util/timeLine/index",
+    "form-approval": "/component/formApproval/formApproval"
+  }
+}

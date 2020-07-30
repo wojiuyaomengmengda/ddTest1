@@ -1,0 +1,23 @@
+<view>
+  <view a:for="{{data}}" class="timeline_box">
+   
+    <view  class="timeline_box_left circle_bottom" a:if="{{index === 0}}"> 
+      <view class="timeline_circle"></view>  
+    </view>
+
+    <view  class="timeline_box_left circle_top" a:elif="{{index === data.length - 1}}"> 
+      <view class="timeline_circle"></view>  
+    </view>
+
+    <view  class="timeline_box_left circle_box" a:else> 
+      <view class="timeline_circle"></view>  
+    </view>
+
+
+    <view class="timeline_box_content"> 
+      <view class="content">
+        <slot item="{{item}}"></slot>
+      </view>
+    </view>
+  </view>
+</view>

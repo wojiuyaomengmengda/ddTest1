@@ -1,0 +1,16 @@
+<view 
+    class="cell" 
+    key="cell" 
+    onTap="even"
+>
+    <view class="cell_title">
+        <text class="cell_title_left">{{title}}</text>
+        <view >
+            <slot name="right"/>
+        </view>
+    </view>
+    
+    <view class="cell_content">
+        <slot/>
+    </view>
+</view>

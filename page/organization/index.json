@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "金蝶ERP",
+  "usingComponents": {
+    "cell": "/util/cell/index",
+    "list-loading": "/util/listLoading/index"
+  }
+}

@@ -1,0 +1,75 @@
+.approvalForm_imgView {
+    margin-top: 20rpx;
+    padding: 20rpx 40rpx;
+    background: #fff;
+}
+.approvalForm_imgView .title {
+    color: #666;
+    font-weight: 700;
+}
+.approvalForm_imgView .content {
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.approvalForm_imgView .pro_content_userBox {
+    position: relative;
+    width: 100rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.approvalForm_imgView .pro_content_userBox .del {
+    /* background: #000; */
+    /* border-radius: 50%; */
+    width: 20rpx;
+    height: 20rpx;
+    position: absolute;
+    top: -10rpx;
+    right: 0;
+    font-size: 20rpx;
+    line-height: 20rpx;
+    text-align: center;
+    /* color: #fff; */
+}
+.approvalForm_imgView .pro_content_userBox_image {
+  width: 100rpx;
+  height: 100rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* background: #ccc; */
+  background: #f5f7fa;
+}
+.approvalForm_imgView .pro_content_userBox_image image {
+  width: 100%;
+  height: 100%;
+}
+.approvalForm_imgView .pro_content_userBox .addUser {
+  /* border-radius: 50%; */
+  /* border: 1px dashed red; */
+}
+.approvalForm_imgView .pro_content_userBox_name {
+  font-size: 24rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+
+.approvalForm_imgView .file_item {
+    margin: 10rpx 0;
+    padding: 10rpx;
+    background: #f5f7fa;
+    display: flex;
+}
+.approvalForm_imgView .file_item .file_info {
+    flex: 1;
+    overflow: hidden;/*超出部分隐藏*/
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;/*超出部分省略号显示*/
+}
+.approvalForm_imgView .file_item .file_del{
+    width: 20rpx;
+}

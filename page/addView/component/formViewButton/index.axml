@@ -1,0 +1,5 @@
+<!-- 普通文本 --> 
+<view class="formView_button">
+    <view class="flex_left">{{text}}</view>
+    <view class="flex_right"></view>
+</view>

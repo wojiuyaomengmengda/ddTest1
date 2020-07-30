@@ -1,0 +1,1 @@
+<view class="searchBox" a:if="{{maskShow}}" onTap="searchHide"></view>

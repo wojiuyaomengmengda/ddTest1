@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "my-form": "/util/myForm/index",
+    "cell": "/util/cell/index",
+    "form-view": "/util/formView/index"
+  }
+}

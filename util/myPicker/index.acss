@@ -1,0 +1,58 @@
+.myPickerMaskBox {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    background: rgba(0,0,0,.6);
+    z-index: 12;
+    transition: all .3s;
+}
+.showPicker {
+    /* opacity: 1; */
+    display: block!important;
+}
+.showOptions {
+    display: block!important;
+    transform: translateY(100%)
+}
+.bottom-options{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 13;
+    margin: 10px;
+    display: none;
+    transition: all 3s;
+    transform: translateY(0%)
+}
+.myPickerContent {
+    max-height: 50vh;
+    overflow: scroll;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.my_select_content_cell {
+    padding: 0.15px 0;
+    /* border-top: 1px solid #ddd; */
+    font-size: 16px;
+}
+.my_Picker_searchHeader {
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+.my_select_content_cell_label {
+    padding: 30rpx 0;
+    color: #007aff;
+}
+.my_Picker_bank_btn_clear {
+    padding: 30rpx 0;
+    color: #333;
+}

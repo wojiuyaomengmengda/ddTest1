@@ -1,0 +1,8 @@
+<view class="searchBox {{top && 'searchBox_box_top'}}" a:if="{{maskShow}}" onTap="close"></view>
+<view 
+    class="searchBox_box" 
+    style="height: {{maskShow ? height : 0}}"
+    key="pupop"
+>
+    <slot />
+</view>

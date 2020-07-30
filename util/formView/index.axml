@@ -1,0 +1,85 @@
+    <!-- 普通文本 --> 
+    <view a:if="{{config.type === 'text'}}" class="formView_button">
+        <view>{{config.value}}</view>
+    </view>
+
+    <!-- 文本输入框 --> 
+    <view class="formView_button" a:if="{{config.type === 'input'}}">
+        <input a:if="{{config.type === 'input'}}" type="" placeholder="请输入" auto-focus value="{{config.value}}" onInput="bindKeyInput"/>
+    </view>
+
+    <!-- 数字输入框 --> 
+    <view class="formView_button" a:if="{{config.type === 'number'}}">
+        <input a:if="{{config.type === 'number'}}" type="digit" placeholder="请输入" auto-focus value="{{config.value}}" onInput="bindKeyInput"/>
+    </view>
+
+    <!-- 按钮 --> 
+    <view catchTap="onChange" class="formView_button" a:if="{{config.type === 'button'}}">
+        <view class="flex_left">{{config.value}}</view>
+        <view class="flex_right"><image src="../../image/right.png" mode="aspectFill" /></view>
+    </view>
+
+    <!-- 文本域 -->
+    <view class="formView_textarea" a:if="{{config.type === 'textarea'}}">
+        <textarea onBlur="bindKeyInput" auto-height placeholder="请输入" maxlength="-1" value="{{config.value}}" a:if="{{config.type === 'textarea'}}"/>
+    </view>
+
+    <!-- 添加图片 -->
+    <view class="formView_image" a:if="{{config.type === 'image'}}">
+        <view class="addFile" catchTap="onChange">添加图片</view>
+        <view a:for="{{config.value}}" onTap="previewImage" class="imageView" data-index="{{index}}">{{item.name}}</view>
+        <!-- <view>{{config.value[0].name}}</view> -->
+    </view>
+
+    <!-- 添加文件 -->
+    <view class="formView_file" a:if="{{config.type === 'file'}}">
+        <view class="addFile" catchTap="onChange">添加附件</view>
+        <block a:for="{{config.value}}" class="imageView">
+            <view class="imageView">{{item.name}}</view>      
+        </block>
+    </view>
+
+    <!-- 用户头像 -->
+    <view class="formView_user" a:if="{{config.type === 'user'}}">
+        <open-avatar
+            userId="{{config.value}}"
+            size="normal"></open-avatar>
+    </view>
+
+    <!-- 金额输入框 --> 
+    <view class="formView_money" a:if="{{config.type === 'money'}}">
+        <view>
+            <input type="digit" placeholder="请输入" auto-focus value="{{config.value}}" onInput="bindKeyInput"/>
+        </view>
+        <view class="formView_money_word">{{word}}</view>
+    </view>
+
+    <!-- 金额文本域 --> 
+    <view class="formView_money" a:if="{{config.type === 'moneyText'}}">
+        <!-- <view>
+            <input type="digit" placeholder="请输入" auto-focus value="{{config.value}}" onInput="bindKeyInput"/>
+        </view> -->
+        <view>{{config.value}}</view>
+        <view class="formView_money_word">{{word}}</view>
+    </view>
+
+    <!-- picker选择器 --> 
+    <view catchTap="onPickerShow" class="formView_button" a:if="{{config.type === 'picker'}}">
+        <view class="flex_left">{{ pickerValue }}</view>
+        <view class="flex_right"><image src="../../image/right.png" mode="aspectFill" /></view>
+    </view>
+
+    <!-- 选择银行卡号组件 -->
+    <pupop maskShow="{{pickerShow}}" onClose="pickerHide" height="600rpx">
+        <view class="pupop_picker_box">
+            <view class="pupop_picker_box_header">
+                <view class="cancel" onTap="pickerHide">取消</view>
+                <view class="sure" onTap="pickerSubmit">确定</view>
+            </view>
+            <picker-view value="{{pickerIndex}}" onChange="onPickerChange">
+                <picker-view-column >
+                    <view a:for="{{config.option}}">{{item.value}}</view>
+                </picker-view-column>
+            </picker-view>
+        </view>
+    </pupop>

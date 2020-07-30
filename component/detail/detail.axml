@@ -1,0 +1,40 @@
+<block a:for="{{details}}">
+    <view class="m-t-20">
+        <cell title="{{`明细${index + 1}`}}">
+            <view 
+                slot="right" 
+                class="addView_cell_details_addBox">
+                <text 
+                    class="addBox_add addBoxItem" 
+                    onTap="addDetails">
+                    +
+                </text>
+                <text 
+                    class="addBox_reduce addBoxItem" 
+                    data-id="{{index}}" 
+                    onTap="reduceDetails" 
+                    a:if="{{index !== 0}}">
+                    -
+                </text>
+            </view>
+            <view a:for="{{item}}" a:for-item="itemName">
+                <my-form title="{{itemName.title}}" item="{{itemName}}" required="true">
+                    <form-view 
+                        config="{{itemName}}" 
+                        onChanges="changes" 
+                        onBindKeyInput="bindKeyInput">
+                    </form-view>
+                </my-form>
+            </view>
+        </cell>
+    </view>
+</block>
+
+<view>
+    <my-form title="总金额:">
+        <view>
+            <view>{{allMoney}}</view>
+            <view class="formView_money_word">{{word}}</view>
+        </view>
+    </my-form>
+</view>
