@@ -1,0 +1,85 @@
+{
+    "appId": "dinghpaajb6qay2vbyle",
+    "formId": "AP_PAYBILL",
+    "formType": "BXSQ",
+    "id": "",
+    "operate": 2,
+    "content": {
+        "props": [
+            {
+                "id": "orgId",
+                "value": {
+                    "id": "369148756",
+                    "value": "蓝海实业集团"
+                }
+            },
+            {
+                "id": "deptId",
+                "value": {
+                    "id": "369213592",
+                    "value": "通讯录公司本部"
+                }
+            },
+            {
+                "id": "empId",
+                "value": {
+                    "id": "2121212661688241",
+                    "value": "刘辉"
+                }
+            },
+            {
+                "id": "date",
+                "value": "2020-08-03"
+            },
+            {
+                "id": "bankName",
+                "value": {
+                    "id": "ZOOO222",
+                    "value": "中行XX支行"
+                }
+            },
+            {
+                "id": "bankAccount",
+                "value": "6225887855329188"
+            },
+            {
+                "id": "accountId",
+                "value": "6225887855329199"
+            },
+            {
+                "id": "remark",
+                "value": "备注123"
+            }
+        ],
+        "detail": [
+            [
+                {
+                    "id": "costId",
+                    "value": "报销项目A"
+                },
+                {
+                    "id": "amount",
+                    "value": 123.45
+                },
+                {
+                    "id": "comment",
+                    "value": "费用明细123"
+                }
+            ],
+            [
+                {
+                    "id": "costId",
+                    "value": "报销项目B"
+                },
+                {
+                    "id": "amount",
+                    "value": 456.78
+                },
+                {
+                    "id": "comment",
+                    "value": "费用明细BBB"
+                }
+            ]
+        ]
+    }
+}
